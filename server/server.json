@@ -1,0 +1,24 @@
+{
+  "components": [
+    {
+      "id": "1",
+      "title": "input"
+    },
+    {
+      "id": "2",
+      "title": "button"
+    },
+    {
+      "id": "3",
+      "title": "checkbox"
+},
+    {
+      "id": "4",
+      "title": "select"
+    },
+    {
+      "id": "5",
+      "title": "textarea"
+    }
+  ]
+}
