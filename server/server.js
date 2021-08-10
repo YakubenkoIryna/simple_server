@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 // DECLARE JWT-secret
 const JWT_Secret = 'your_secret_key';
 
-let testUser = { email: 'form@gmai.com', password: '123456'};
+let testUser = {email: 'form@gmai.com', password: '123456'};
 
 app.post('/api/authenticate', (req, res) => {
 
@@ -20,7 +20,7 @@ app.post('/api/authenticate', (req, res) => {
         let user = req.body;
         console.log(user)
 
-        if (testUser.email===req.body.email && testUser.password === req.body.password) {
+        if (testUser.email === req.body.email && testUser.password === req.body.password) {
             let token = jwt.sign(user, JWT_Secret);
             res.status(200).send({
                 signed_user: user,
@@ -28,12 +28,14 @@ app.post('/api/authenticate', (req, res) => {
             });
         } else {
             res.status(403).send({
+
                 errorMessage: 'You do not have a permission'
 
             });
         }
     } else {
         res.status(403).send({
+
             errorMessage: 'Please provide email and password'
 
         });
