@@ -4,6 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "concurrently \"(npm run server)\" \"(npm run json)\"" ,
+    "server": "nodemon server.js",
+    "json": "json-server server.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
