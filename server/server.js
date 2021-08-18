@@ -28,16 +28,12 @@ app.post('/api/authenticate', (req, res) => {
             });
         } else {
             res.status(403).send({
-
                 errorMessage: 'You do not have a permission'
-
             });
         }
     } else {
         res.status(403).send({
-
             errorMessage: 'Please provide email and password'
-
         });
     }
 
